@@ -1,10 +1,10 @@
-
+// requiring our depencies
 var express = require('express');
 var router = express.Router();
-
+// Import the model (burger.js) to use its database functions
 var burgers = require('../models/burger.js');
 
-
+// Create the routes and associated logic
 router.get('/', function(req, res){
 	res.redirect('/burgers')
 });
@@ -57,5 +57,5 @@ router.put('/burgers/update/:id', function(req, res){
 
 
 
-
+// Exporting our routes 
 module.exports = router;

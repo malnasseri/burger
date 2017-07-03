@@ -15,7 +15,7 @@
 
 	// override with POST having ?_method=DELETE
 	app.use(methodOverride('_method'))
-
+	// sets Handlebars as the view engine
 	var exphbs = require('express-handlebars');
 
 	app.engine('handlebars', exphbs({
@@ -24,7 +24,7 @@
 	}));
 
 	app.set('view engine', 'handlebars');
-
+	// Import routes and give the server access to them
 	var routes = require('./controllers/burgers_controller.js');
 
 	app.use('/', routes);
