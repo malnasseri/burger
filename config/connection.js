@@ -13,7 +13,7 @@ var connection;
    			host: "localhost",
             user: "root",
             password: "",
-            database: "burgers_db"
+            database: "ebn5dr77n1kmyr6o"
    		})
 
 
