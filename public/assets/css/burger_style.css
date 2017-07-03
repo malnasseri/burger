@@ -1,0 +1,80 @@
+body{
+ background-color: #E9E581;
+
+}
+
+
+.jumbotron img{
+	max-height: 160px;
+	max-width: 160px;
+	border-radius: 10px;
+	float: right;
+	
+
+}
+
+.jumbotron {
+	background-color: #505050;
+	text-align: center;
+	height: 240px;
+}
+
+.jumbotron h1 {
+	float: left;
+	margin-left: 25px;
+	margin-top: 40px;
+	color: beige;
+}
+
+.list-group-item {
+	padding: 15px 10px 0px 10px;
+	margin-top: 10px;
+	background-color: #FF6347;
+
+}
+
+.btn {
+	padding: 5px;
+	margin-bottom: 16px;
+	color: beige;
+}
+.btn2 {
+	padding: 8px;
+	margin-bottom: 16px;
+	color: white;
+	margin-left: 320px;
+	margin-bottom: 50px;
+	background: none;
+	
+	background-color: #000080;
+}
+.lead {
+	margin-top: 5px;
+	color: beige;
+	font-weight: bold;
+
+}
+#par {	
+	margin-left: 25px;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	color: #505050;
+}
+
+#devoured {
+	text-align: center;
+	margin: 0px 0px -20px 0px;
+	padding-bottom: 2px;
+	background-color: #FF6347;
+	font-weight: bold;
+}
+
+.form-control {
+	max-width: 400px;
+	margin-left: 190px;
+}
+
+
+
+
