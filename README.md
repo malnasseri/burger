@@ -17,4 +17,5 @@ The demo of the burger eating application can be found [here](https://da-burger.
 
 ![BurgerApp](./public/assets/images/burgerApp.png)
 ![BurgerApp-2](./public/assets/images/burgerApp2.png)
+![BurgerApp-3](./public/assets/images/burgerApp3.png)
 
