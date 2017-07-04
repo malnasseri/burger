@@ -4,23 +4,26 @@ body{
 }
 
 
-.jumbotron img{
-	max-height: 160px;
-	max-width: 160px;
+.thumbnail{
+	max-height: 120px;
+	max-width: 120px;
 	border-radius: 10px;
 	float: right;
+	overflow: auto;
+	margin-bottom: 30px;
+	
 	
 
 }
 
 .jumbotron {
 	background-color: #505050;
-	text-align: center;
-	height: 240px;
+	height: 140px;
+	
 }
 
 .jumbotron h1 {
-	float: left;
+	
 	margin-left: 25px;
 	margin-top: 40px;
 	color: beige;
@@ -30,6 +33,7 @@ body{
 	padding: 15px 10px 0px 10px;
 	margin-top: 10px;
 	background-color: #FF6347;
+	max-width: 280px;
 
 }
 
@@ -68,12 +72,81 @@ body{
 	padding-bottom: 2px;
 	background-color: #FF6347;
 	font-weight: bold;
+	width: 300px;
+	float: right;
 }
 
 .form-control {
 	max-width: 400px;
 	margin-left: 190px;
 }
+@media screen and (max-width: 980px) {
+	body{
+		width: 95%;
+	}
+	.jumbotron {
+	height: 200px;
+	width: 800px;
+	
+	
+}
+
+.jumbotron h1 {
+	
+	margin-left: 15px;
+	margin-top: 30px;
+	float: right;
+}
+.thumbnail{
+	float: left;
+}
+#devoured {
+	margin-bottom: 60px;
+}
+}
+
+@media screen and (max-width: 768px) {
+
+	.jumbotron {
+	width: 780px;
+}
+.list-group-item {
+	padding: 15px 10px 0px 10px;
+	margin-top: 10px;
+	background-color: #FF6347;
+	max-width: 260px;
+
+}
+#devoured {
+	margin-bottom: 60px;
+}
+}
+@media screen and (max-width: 640px) {
+
+.jumbotron {
+	height: 180px;
+}
+
+.jumbotron h1 {
+	
+	margin-right: 220px;
+}
+
+.thumbnail{
+
+	margin-left: 40px;
+}
+.form-control {
+	max-width: 300px;
+	margin-left: 160px;
+}
+#devoured {
+	margin-bottom: 60px;
+}
+.btn2 {
+	margin-left: 250px;
+}
+
 
 
 
