@@ -14,3 +14,7 @@ The user may enter any burger name to add it to the menu. This also adds the new
 The demo of the burger eating application can be found [here](https://da-burger.herokuapp.com/).
 
 ## Below Are some Screen shots showing how the app works:
+
+![BurgerApp](.public/assets/images/burgerApp.png)
+![BurgerApp-2](.public/assets/images/burgerApp2.png)
+
