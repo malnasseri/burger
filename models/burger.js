@@ -11,22 +11,15 @@ var burgers = {
 		});
 	},
 	// The variables cols and vals are arrays
-	create: function(col, vals, cb){
-		
-						orm.create('burgers', col, vals, function(res){
-			
-								cb(res);
-		});
-	},
-	// The objColVals is an object specifying columns as object keys with associated values
-	update: function(objColVals, condition, cb){
-		
-						orm.update('burgers', objColVals, condition, function(res){
-			
-								cb(res);
-		});
-	}
+	create: function(name, cb) {
+    orm.create("burgers", ["burger_name", "devoured"], [name, false], cb);
+  },
+  update: function(id, cb) {
+    var condition = "id=" + id;
+    orm.update("burgers", {
+      devoured: true
+    }, condition, cb);
+  }
 };
-
 // Exporting our database functions 
 module.exports = burgers;
