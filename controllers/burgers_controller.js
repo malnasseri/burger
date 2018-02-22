@@ -25,7 +25,7 @@ router.get('/burgers', function(req, res){
 	
 router.post('/burgers/create', function (req, res) {
   burgers.create(['burger_name', 'devoured', 'lettuce', 'tomatoes', 'onions', 'ketchup', 'mayo', 'pickles', 'bacon', 'cheddar', 'american', 'bbq'], [req.body.burger_name, req.body.devoured, req.body.lettuce, req.body.tomatoes, req.body.onions, req.body.ketchup, req.body.mayo, req.body.pickles, req.body.bacon, req.body.cheddar, req.body.american, req.body.bbq], function () {
-    res.redirect('/burgers');
+    res.redirect('/');
 
   });
 });
@@ -37,7 +37,7 @@ router.put('/burgers/update/:id', function (req, res) {
   console.log('condition', condition);
 
   burgers.update({ devoured: req.body.devoured }, condition, function () {
-    res.redirect('/burgers');
+    res.redirect('/');
   });
 });
 
@@ -45,7 +45,7 @@ router.post('/burgers/delete/:id', function (req, res) {
   var condition = 'id = ' + req.params.id;
 
   burgers.delete(condition, function () {
-    res.redirect('/burgers');
+    res.redirect('/');
   });
 });
 
