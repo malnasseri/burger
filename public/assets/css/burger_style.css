@@ -227,13 +227,24 @@ strong {
 	
 	
 }
+.modal-body .close {
+	color: white !important;
+	opacity: 1;
+	margin-top: 10px;
+	margin-right: -20px;
+	font-size: 28px;
+}
 #header-p {
 	margin-top: 30px;
 	padding-right: 20px;
 	padding-left: 20px;
 	/*max-width: 750px;*/
 	text-align: center;
+	font-size: 26px;
 
+}
+#header-name {
+	text-align: center;
 }
 .rounded:hover {
 
@@ -590,94 +601,5 @@ li {
 	background-color:  #ececec !important;
 	font-size: 18px;
 }
-/*@media screen and (max-width: 980px) {
-	body{
-		width: 95%;
-	}
-	.jumbotron {
-	height: 200px;
-	width: 800px;
-	
-}
-
-.jumbotron h1 {
-	
-	margin-left: 15px;
-	margin-top: 30px;
-	float: right;
-}
-.thumbnail{
-	float: left;
-}
-
-#devoured {
-	margin: 10px;
-	margin-right: -80px;
-	
-}
-.form-control {
-	margin-left: 290px;
-}
-.btn2 {
-	margin-left: 430px;
-
-}
 
 
-}
-
-@media screen and (max-width: 768px) {
-
-	.jumbotron {
-	width: 780px;
-	padding-right: 40px;
-}
-
-#devoured {
-	margin-right: 2px;
-}
-.form-control {
-	margin-left: 180px;
-}
-.btn2 {
-	margin-left: 320px;
-
-}
-
-
-}
-@media screen and (max-width: 640px) {
-
-.jumbotron {
-	height: 180px;
-}
-
-.jumbotron h1 {
-	
-	margin-right: 220px;
-}
-
-.thumbnail{
-
-	margin-left: 40px;
-}
-.form-control {
-	max-width: 300px;
-	margin-left: 160px;
-}
-#devoured {
-	max-width: 240px;
-}
-.btn2 {
-	margin-left: 250px;
-}
-.list-group-item {
-	max-width: 240px;
-
-}
-}
-
-
-
-
-*/
