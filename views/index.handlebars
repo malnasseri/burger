@@ -1,62 +1,223 @@
-<div class="container">
-	<div class="jumbotron">
-		<h1><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> Eat-Da-Burger! </h1>
-		<img id="img" class="thumbnail" src="/assets/images/burger.jpg">
+<div class="container-fluid">
+	
+		<div class="row">
+			<div class="col-sm-9 header">
+		<img id="header-img" src="../assets/images/header.jpg"  height="260" width="200">
+	
+	
+		<h2 id="header-h2"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> Burgers Hut! </h2>
+		<p id="header-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum repellat laudantium reprehenderit unde itaque, provident, beatae laboriosam blanditiis ullam dolore. Dolorum ipsam nobis facere, ratione omnis quod, eligendi provident reiciendis.</p>
+
 	</div>
+	<div class="col-sm-3 btn-div">
+		<div id="burger-btn" class="col-sm-12">
+		<a  data-toggle="modal" data-target=".bs-example-modal-sm2"><img class="responsive-img rounded" src="../assets/images/burger4.jpg" width="110" height="110" alt="IMAGE"/></a>
+		<h2 id="order">Order Now!</h2>
+	</div>
+				{{!-- <button class="btn modal-btn1" data-toggle="modal" data-target=".bs-example-modal-sm2">Add A Burger!</button> --}}
+	</div>
+
+</div>
+		
+
 	{{!-- burger list before being eaten --}}
-	<div class="row">
-		<div class="col-sm-6">
-			<div class="panel-panel default">
-				<ul class="list-group">
+	<div class="row main-content">
+		<div class="col-sm-6 ready">
+			<h1>Ready to Eat Orders!</h1>
+				
 					{{#each burgers}}
 					{{#unless this.devoured}}
-					<li class="list-group-item">
-						<div class="input-group">
-							<p class="lead"> {{this.burger_name}} </p>
-							<span class="input-group-btn">
-								<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+					
+					<div class="grid-1-5">
+			<h2 class="id">Order #{{this.id}}</h2>
+			<h3><span class="uppercase">{{this.burger_name}}</span></h3>
+			<div class="row">
+			<div class="col-sm-6">
+			<ul>
+				<li>{{this.lettuce}}</li>
+				<li>{{this.tomatoes}}</li>
+				<li>{{this.onions}}</li>
+				<li>{{this.ketchup}}</li>
+				<li>{{this.mayo}}</li>
+
+			</ul>
+			</div>
+			<div class="col-sm-6"></div><ul>
+				<li>{{this.pickles}}</li>
+				<li>{{this.bacon}}</li>
+				<li>{{this.cheddar}}</li>
+				<li>{{this.american}}</li>
+				<li>{{this.bbq}}</li>
+				
+
+			</ul></div>
+			<div class="btns">
+				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
 									<input type="hidden" name="devoured" value="true">
-									<button class="btn btn-primary btn-lg" type="submit"> Devour it! </button>
+									<button class="button2 eat" type="submit"> Eat it! </button>
 								</form>
-							</span>
-						</div>
-					</li>
-					{{/unless}}
-					{{/each}}
-				</ul>
-			</div>
-		</div>
-		{{!-- Devoured burger list  --}}
-			<div class="col-sm-2">
-			</div>
-			<div class="col-sm-4">
-				<div class="panel panel-default">
-					<ul class="list-group">
-						{{#each burgers}}
-						{{#if this.devoured}}
-						<li id="devoured" class="list-group-item">
-							<p class="lead">{{this.burger_name}} </p>
-						</li>
-						{{/if}}
-						{{/each}}
-					</ul>
-				</div>
-			</div>
-		</div>
-		</div>
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1">
-				<p id="par"class="lead"> Enter the name of the burger you want to eat & click Add Burger button </p>
-				{{!-- add burgers Form --}}
-				<form class="create-update-form" action="burgers/create" method="POST">
-					<div class="form-group">
-						<textarea class="form-control input-lg" type="text" name="b_name" rows="3"> </textarea>
-					</div>
-					<button class="btn2 btn-primary btn-lg" type="submit">Add Burger!</button>
+				<form action="burgers/delete/{{this.id}}?_method=POST" method="POST">
+					<input type="hidden">
+					<button class="button delete2" type="submit">Delete </button>
 				</form>
 			</div>
 		</div>
-	</div>
+					{{/unless}}
+					
+					{{/each}}
+			
+			</div>
+		
+		{{!-- Devoured burger list  --}}
+		
+			<div class="col-sm-6 eaten">
+				<h1>Already Eaten!</h1>
+				{{#each burgers}}
+				{{#if this.devoured}}
+
+		<div class="grid-1-5">
+			<h2>Order #{{this.id}}</h2>
+			<h3><span class="uppercase">{{this.burger_name}}</span></h3>
+			<div class="row">
+			<div class="col-sm-6 left-condiments">
+			<ul>
+				<li>{{this.lettuce}}</li>
+				<li>{{this.tomatoes}}</li>
+				<li>{{this.onions}}</li>
+				<li>{{this.ketchup}}</li>
+				<li>{{this.mayo}}</li>
+			</ul>
+			</div>
+			<div class="col-sm-6"></div><ul>
+				<li>{{this.pickles}}</li>
+				<li>{{this.bacon}}</li>
+				<li>{{this.cheddar}}</li>
+				<li>{{this.american}}</li>
+				<li>{{this.bbq}}</li>
+				
+
+			</ul></div>
+			<div class="btns">
+				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+					<input type="hidden" name="devoured" value="false">
+					<button class="button2" type="submit"> Re Order! </button>
+				</form>
+				<form action="burgers/delete/{{this.id}}?_method=POST" method="POST">
+					<input type="hidden">
+					<button class="button" type="submit">Delete </button>
+				</form>
+			</div>
+		</div>
+						{{/if}}
+						{{/each}}
+					</div>
+
+		</div>
+		
+
+<div class="modal fade bs-example-modal-sm2">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     
+      <div class="modal-body">
+      	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+       <form class="create-update-form" action="burgers/create" method="POST">
+
+					<div class="form-group">
+						<h3>Burger Name</h3>
+						<input class="form-control" type="text" name="burger_name" rows="3" required>
+						<div class="row">
+						<div class="col-sm-6">
+							
+						<ul>
+        
+            
+       
+        <li>
+
+           <input id="checkBox" type="checkbox" name="lettuce" value="lettuce"/> <img src="../assets/images/shredded_lettuce.png"  class="img" height="42" width="42"><span id="span">Lettuce</span>
+
+        </li>
+        <li>
+            <input id="checkBox" type="checkbox" name="tomatoes" value="tomatoes"/><img id="tomato" src="../assets/images/tomato_slice.png"   class="img" height="42" width="42"><span id="span"> Tomatoes</span>
+
+        </li>
+        <li>
+            <input id="checkBox" type="checkbox" name="onions" value="onions"/> <img src="../assets/images/reconstituted_onions.png"  class="img"  height="42" width="42"><span id="span">Onions</span>
+        </li>
+       <li >
+            <input id="checkBox" type="checkbox" name="ketchup" value="ketchup"/> <img src="../assets/images/ketchup.png"   class="full-img" height="51" width="51"><span id="span">Ketchup</span>
+        </li>
+        <li>
+            <input id="checkBox" type="checkbox" name="mayo" value="mayo"/> <img src="../assets/images/mayonnaise.png"  class="full-img" height="51" width="51"><span id="span">Mayo</span>
+        </li>
+    </ul>
+					</div><div class="col-sm-6"><ul>
+        
+            
+       
+        <li>
+
+           <input id="checkBox" type="checkbox" name="pickles" value="pickles"/> <img src="../assets/images/pickles.png"    class="img2" height="42" width="42"><span id="span">Pickles</span>
+
+        </li>
+        <li>
+            <input id="checkBox" type="checkbox" name="bacon" value="bacon"/><img src="../assets/images/bacon.png" id="bacon" class="img2" height="42" width="42"><span id="span"> Bacon</span>
+
+        </li>
+        <li>
+            <input id="checkBox" type="checkbox" name="cheddar" value="cheddar"/> <img src="../assets/images/cheddar.png" class="img2" height="42" width="42"><span id="span">Cheddar</span>
+        </li>
+       <li>
+            <input id="checkBox" type="checkbox" name="american" value="american"/> <img src="../assets/images/american.png" class="img2" height="42" width="42"><span id="span">American</span>
+        </li>
+        <li>
+            <input id="checkBox" type="checkbox" name="bbq" value="bbq"/> <img src="../assets/images/bbq.png"  class="full-img" height="51" width="51"><span id="span">BBQ</span>
+        </li>
+    </ul></div>
+					</div>
+					<div class="col-sm-12">
+					<button class="btn2 btn-primary btn-block" type="submit">Submit</button>
+				</div>
+				</form>
+				</div>
+      </div>
+     
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+				
+
+			</div>
+		</div>
+
+{{!--  --}}
+
+</div>
+<script type="text/javascript">/*
+	Custom checkbox and radio button - Jun 18, 2013
+	(c) 2013 @ElmahdiMahmoud 
+	license: https://www.opensource.org/licenses/mit-license.php
+*/   
+$('input[name="radio-btn"]').wrap('<div class="radio-btn"><i></i></div>');
+$(".radio-btn").on('click', function () {
+    var _this = $(this),
+        block = _this.parent().parent();
+    block.find('input:radio').attr('checked', false);
+    block.find(".radio-btn").removeClass('checkedRadio');
+    _this.addClass('checkedRadio');
+    _this.find('input:radio').attr('checked', true);
+});
+$('input[id="checkBox"]').wrap('<div class="check-box"><i></i></div>');
+$.fn.toggleCheckbox = function () {
+    this.attr('checked', !this.attr('checked'));
+}
+$('.check-box').on('click', function () {
+    $(this).find(':checkbox').toggleCheckbox();
+    $(this).toggleClass('checkedBox');
+});</script>
+
+
 
 
 
