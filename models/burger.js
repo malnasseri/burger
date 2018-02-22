@@ -9,11 +9,13 @@ var burgers = {
 	},
 	// orm to add values to the burger database
 	// cols and vals are arrays
-	create: function (cols, vals, callback) {
-		orm.create('burgers', cols, vals, function (result) {
-			callback(result);
-		});
-	},
+	create: function(name, cb) {
+    orm.create("burgers", [
+      "burger_name", "devoured", 'lettuce', 'tomatoes', 'onions', 'ketchup', 'mayo', 'pickles', 'bacon', 'cheddar', 'american', 'bbq'
+    ], [
+      name, false
+    ], cb);
+  },
 	// orm to update values in the burger database
 	// objColVals would be the columns and values that you want to update	
 	update: function (objColVals, condition, callback) {
