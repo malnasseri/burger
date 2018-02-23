@@ -23,13 +23,15 @@
 
 	{{!-- burger list before being eaten --}}
 	<div class="row main-content">
+
 		<div class="col-xs-12 col-sm-6 ready">
+
 			<h1>Ready to Eat Orders!</h1>
 				
 					{{#each burgers}}
 					{{#unless this.devoured}}
 					
-					<div class="grid-1-5">
+		<div class="grid-1-5">
 			<h2 class="id">Order #{{this.id}}</h2>
 			<h3><span class="uppercase">{{this.burger_name}}</span></h3>
 			<div class="row">
@@ -43,7 +45,8 @@
 
 			</ul>
 			</div>
-			<div class="col-xs-6 col-sm-6"></div><ul>
+			<div class="col-xs-6 col-sm-6"></div>
+			<ul>
 				<li>{{this.pickles}}</li>
 				<li>{{this.bacon}}</li>
 				<li>{{this.cheddar}}</li>
@@ -51,7 +54,7 @@
 				<li>{{this.bbq}}</li>
 				
 
-			</ul></div>
+			</ul>
 			<div class="btns">
 				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
 									<input type="hidden" name="devoured" value="true">
@@ -61,6 +64,7 @@
 					<input type="hidden">
 					<button class="button delete2" type="submit">Delete </button>
 				</form>
+			</div>
 			</div>
 		</div>
 					{{/unless}}
@@ -89,7 +93,7 @@
 				<li>{{this.mayo}}</li>
 			</ul>
 			</div>
-			<div class="col-xs-6 col-sm-6"></div><ul>
+			<div class="col-xs-6 col-sm-6"><ul>
 				<li>{{this.pickles}}</li>
 				<li>{{this.bacon}}</li>
 				<li>{{this.cheddar}}</li>
@@ -97,7 +101,7 @@
 				<li>{{this.bbq}}</li>
 				
 
-			</ul></div>
+			</ul></div></div>
 			<div class="btns">
 				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
 					<input type="hidden" name="devoured" value="false">
@@ -182,15 +186,14 @@
 				</div>
 				</form>
 				</div>
-      </div>
+      
      
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 				
 
-			</div>
-		</div>
+	
 
 {{!--  --}}
 
