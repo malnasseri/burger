@@ -671,8 +671,66 @@ li {
 }
 }
 
+@media only screen and (min-width : 667px) and (max-width: 767px){
 
+#header-img {
+	
 
+}
+#header-h2 {
+	margin-top: 0px;
+	padding-top: 40px;
+	font-size: 45px;
+}
+.responsive-img {
+	margin-top: 20px;
+	margin-left: 260px;
+}
+.btn-div {
+	padding: 0;
+	height: 200px;
+}
+
+.main-content {
+	padding: 0;
+ }
+ .grid-1-5 {
+ margin-left: 0px;
+ 
+}
+.ready h1 {
+	
+	margin-right: 0;
+	margin-bottom: 15px;
+}
+.eaten h1 {
+	
+	margin-right: 0;
+	margin-bottom: 15px;
+}
+.button, .button2 {
+	font-size: 14px;
+
+}
+.eat {
+		margin-right: -18px;
+}
+.re-order {
+	margin-right: 20px;
+}
+.delete {
+	margin-left: -5px;
+}
+.modal-right-condiments {
+float: right;
+margin-top: -340px;
+margin-right: 50px;
+}
+.modal-left-condiments {
+
+margin-top: 60px;
+}
+}
 
 
 
