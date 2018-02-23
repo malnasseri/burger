@@ -673,10 +673,6 @@ li {
 
 @media only screen and (min-width : 667px) and (max-width: 767px){
 
-#header-img {
-	
-
-}
 #header-h2 {
 	margin-top: 0px;
 	padding-top: 40px;
@@ -731,15 +727,46 @@ margin-right: 50px;
 margin-top: 60px;
 }
 }
+@media only screen and (min-width : 768px) and (max-width: 1023px){
 
+#header-h2 {
+	
+	font-size: 45px;
+}
+#header-p {
+	font-size: 22px;
+}
+#order {
+	font-size: 28px;
+}
 
+.responsive-img {
+	margin-top: 40px;
+	margin-left: 11px;
+	margin-bottom: 10px;
+}
+#header-img {
+	margin-left: -15px;
 
-
-
-
-
-
-
-
+}
+.grid-1-5 {
+ width: 100%;
+ margin-left: 0;
+ 
+}
+.main-content {
+	padding: 0;
+ }
+ .ready h1 {
+	
+	margin-right: 0;
+	margin-bottom: 15px;
+}
+.eaten h1 {
+	
+	margin-right: 0;
+	margin-bottom: 15px;
+}
+}
 
 
