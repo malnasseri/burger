@@ -45,7 +45,7 @@
 
 			</ul>
 			</div>
-			<div class="col-xs-6 col-sm-6"></div>
+			<div class="col-xs-6 col-sm-6">
 			<ul>
 				<li>{{this.pickles}}</li>
 				<li>{{this.bacon}}</li>
@@ -54,7 +54,7 @@
 				<li>{{this.bbq}}</li>
 				
 
-			</ul>
+			</ul></div>
 			<div class="btns">
 				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
 									<input type="hidden" name="devoured" value="true">
@@ -101,7 +101,7 @@
 				<li>{{this.bbq}}</li>
 				
 
-			</ul></div></div>
+			</ul></div>
 			<div class="btns">
 				<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
 					<input type="hidden" name="devoured" value="false">
@@ -113,10 +113,11 @@
 				</form>
 			</div>
 		</div>
+		</div>
 						{{/if}}
 						{{/each}}
 					</div>
-
+	
 		</div>
 		
 

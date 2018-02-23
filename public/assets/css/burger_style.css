@@ -520,8 +520,8 @@ ul {
 .grid-1-5 ul li {
   margin: 0 0 0.8333333333333333em;
 }
-.btns {
-	padding-top: 20px;
+.grid-1-5 ul {
+	margin-bottom: 40px;
 }
 .eat {
 right :56% !important;
